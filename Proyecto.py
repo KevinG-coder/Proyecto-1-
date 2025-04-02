@@ -10,18 +10,6 @@ from abc import ABC, abstractmethod
 import time
 import functools
 
-# Decoradores adicionales
-def timing_decorator(func):
-    """Decorador para medir el tiempo de ejecución de una función"""
-    @functools.wraps(func)
-    def wrapper(*args, **kwargs):
-        start_time = time.time()
-        result = func(*args, **kwargs)
-        end_time = time.time()
-        print(f"La función {func.__name__} tomó {end_time - start_time:.6f} segundos en ejecutarse")
-        return result
-    return wrapper
-
 def cache_decorator(func):
     """Decorador para cachear resultados de funciones"""
     cache = {}
@@ -372,7 +360,6 @@ class AnalizadorPolinomio:
         else:
             return TerminoConstante(coef)
     
-    @timing_decorator
     def analizar(self, texto_polinomio):
         """Analiza una cadena de texto y devuelve un objeto Polinomio"""
         polinomio = Polinomio()
@@ -553,7 +540,7 @@ class AplicacionMatematica:
         """Método principal para ejecutar la aplicación"""
         try:
             # Solicitar entrada al usuario
-            texto_polinomio = input("Ingrese el polinomio a derivar: ")
+            texto_polinomio = input("Ingrese el polinomio a derivar, use ^ para expontes (Ej: x^2): ")
             
             # Analizar el polinomio
             polinomio = self.analizador.analizar(texto_polinomio)
