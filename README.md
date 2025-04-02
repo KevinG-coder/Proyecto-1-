@@ -32,7 +32,7 @@ pip install numpy matplotlib
 ## Uso
 Ejecute el archivo principal para iniciar la aplicación:
 ```bash
-python prueba2.py
+python Proyecto.py
 ```
 
 La aplicación le pedirá que ingrese una expresión matemática. Por ejemplo:
