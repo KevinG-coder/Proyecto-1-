@@ -105,8 +105,5 @@ Las contribuciones son bienvenidas. Por favor, asegúrese de seguir los siguient
 4. Envíe a la rama (`git push origin feature/nueva-caracteristica`)
 5. Abra una solicitud de extracción
 
-## Licencia
-[Especificar la licencia aquí]
-
 ## Autor
-[Su nombre o nombre de equipo]
+[Kevin Santiago Gomez Cardenas]
